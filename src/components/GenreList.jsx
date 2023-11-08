@@ -9,7 +9,7 @@ import {
   Spinner,
 } from '@chakra-ui/react';
 
-const GenreList = ({ onSelectGenre }) => {
+const GenreList = ({ selectedGenre, onSelectGenre }) => {
   const { data, isLoading, error } = useGenres();
 
   if (error) return null;
@@ -27,6 +27,7 @@ const GenreList = ({ onSelectGenre }) => {
               src={genre.image_background}
             />
             <Button
+              fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
               onClick={() => onSelectGenre(genre)}
               fontSize="lg"
               variant="link"
