@@ -8,6 +8,7 @@ import {
   ListItem,
   Spinner,
 } from '@chakra-ui/react';
+import getCroppedImagedUrl from '../services/images-url';
 
 const GenreList = ({ selectedGenre, onSelectGenre }) => {
   const { data, isLoading, error } = useGenres();
@@ -24,7 +25,8 @@ const GenreList = ({ selectedGenre, onSelectGenre }) => {
             <Image
               boxSize="32px"
               borderRadius={8}
-              src={genre.image_background}
+              objectFit="cover"
+              src={getCroppedImagedUrl(genre.image_background)}
             />
             <Button
               fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
