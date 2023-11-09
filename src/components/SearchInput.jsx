@@ -7,6 +7,7 @@ const SearchInput = ({ onSearch }) => {
 
   return (
     <form
+      style={{ width: '100%' }}
       onSubmit={(e) => {
         e.preventDefault();
         if (ref.current) onSearch(ref.current.value);

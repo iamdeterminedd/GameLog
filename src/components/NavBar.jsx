@@ -4,11 +4,11 @@ import ColorModeSwitch from './ColorModeSwitch';
 import SearchInput from './SearchInput';
 import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({ onSearch }) => {
   return (
     <HStack padding="10px">
       <Image src={logo} boxSize="60px" />
-      <SearchInput onSearch={''} />
+      <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
   );
