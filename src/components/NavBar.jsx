@@ -7,7 +7,7 @@ import React from 'react';
 const NavBar = ({ onSearch }) => {
   return (
     <HStack padding="10px">
-      <Image src={logo} boxSize="60px" />
+      <Image src={logo} boxSize="100px" padding="15px" />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
