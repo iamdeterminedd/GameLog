@@ -14,8 +14,8 @@ const NavBar = ({ onSearch }) => {
         <Image
           src={colorMode === 'dark' ? logoW : logoB}
           boxSize="100px"
-          padding="5px"
-          height="90px"
+          padding={{ base: '1px', lg: '5px' }}
+          height={{ base: '50px', sm: '70px', md: '80px', lg: '90px' }}
         />
       </Link>
       <SearchInput onSearch={onSearch} />
