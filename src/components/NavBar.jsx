@@ -15,6 +15,7 @@ const NavBar = ({ onSearch }) => {
           src={colorMode === 'dark' ? logoW : logoB}
           boxSize="100px"
           padding="5px"
+          height="90px"
         />
       </Link>
       <SearchInput onSearch={onSearch} />
