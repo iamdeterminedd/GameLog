@@ -1,9 +1,12 @@
 import axios from 'axios';
+import config from './config';
+
+const apiKey = config.apiKey;
 
 const axiosInstance = axios.create({
   baseURL: 'https://api.rawg.io/api',
   params: {
-    key: 'YOUR_API_KEY',
+    key: apiKey,
   },
 });
 
